@@ -13,7 +13,7 @@ using System.IO.Compression;
 
 namespace Ctrl_Dll
 {
-    public class cls_File_Cont
+    public class cls_FileCtrl
     {
         //ファイルを開く際に使用するための宣言
         public System.Diagnostics.Process App = null;
@@ -671,6 +671,35 @@ namespace Ctrl_Dll
             Read_File_Dialog.InitialDirectory = F_D;
             //表示ファイルを指定
             Read_File_Dialog.Filter = "すべてのファイル|*.*";
+            //ダイアログ表示初期時に、Excelが選択されるようにする。
+            Read_File_Dialog.FilterIndex = 1;
+            //タイトル設定
+            Read_File_Dialog.Title = "ファイルを選択してください。";
+            if (Read_File_Dialog.ShowDialog() == DialogResult.OK)
+            {
+                return Read_File_Dialog.FileName;
+            }
+            else
+            {
+                return "";
+            }
+        }
+
+        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        /// <summary>
+        /// ファイル選択ダイアログ操作　全てのファイル
+        /// </summary>
+        /// <param name="F_D"></param>
+        /// <returns></returns>
+        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        public string File_Read_Dialog_CSV(string F_D)
+        {
+            //クラス宣言
+            OpenFileDialog Read_File_Dialog = new OpenFileDialog();
+            //初期表示フォルダの指定
+            Read_File_Dialog.InitialDirectory = F_D;
+            //表示ファイルを指定
+            Read_File_Dialog.Filter = "CSVファイル(*.CSV) | *.CSV;|すべてのファイル|*.* ";
             //ダイアログ表示初期時に、Excelが選択されるようにする。
             Read_File_Dialog.FilterIndex = 1;
             //タイトル設定

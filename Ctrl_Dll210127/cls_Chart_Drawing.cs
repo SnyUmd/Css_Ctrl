@@ -19,7 +19,7 @@ namespace Ctrl_Dll
     public class cls_Chart_Drawing
     {
 
-        cls_Text_Cont clsTC = new cls_Text_Cont();
+        cls_TextCtrl clsTC = new cls_TextCtrl();
 
         //**************************************************************************************
         //チャートをクリア

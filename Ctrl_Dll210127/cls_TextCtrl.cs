@@ -20,7 +20,7 @@ using ExcelApplication = Microsoft.Office.Interop.Excel.Application; //„Äê.com„Ä
 
 namespace Ctrl_Dll
 {
-    public class cls_Text_Cont
+    public class cls_TextCtrl
     {
         string New_Line = "\r\n";
 

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-using Google.Apis.Auth.OAuth2;
+/*using Google.Apis.Auth.OAuth2;
 using Google.Apis.Drive.v3;
 using Google.Apis.Drive.v3.Data;
 using Google.Apis.Services;
@@ -25,4 +25,4 @@ namespace Ctrl_Dll
             
         }
     }
-}
+}*/

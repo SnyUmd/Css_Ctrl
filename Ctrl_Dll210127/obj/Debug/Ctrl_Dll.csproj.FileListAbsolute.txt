@@ -233,3 +233,9 @@ C:\Users\shiny\Box Sync\VS_Soft\Ctrl_Dll2\Ctrl_Dll200608\obj\Debug\Ctrl_Dll.cspr
 C:\Users\shiny\Box Sync\VS_Soft\Ctrl_Dll2\Ctrl_Dll200608\obj\Debug\Ctrl_Dll.csproj.CoreCompileInputs.cache
 C:\Users\shiny\Box Sync\VS_Soft\Ctrl_Dll2\Ctrl_Dll200608\obj\Debug\Ctrl_Dll.dll
 C:\Users\shiny\Box Sync\VS_Soft\Ctrl_Dll2\Ctrl_Dll200608\obj\Debug\Ctrl_Dll.pdb
+D:\_git\VS\Css_Ctrl\Ctrl_Dll210127\obj\Debug\Ctrl_Dll.csproj.ResolveComReference.cache
+D:\_git\VS\Css_Ctrl\Ctrl_Dll210127\obj\Debug\Ctrl_Dll.csproj.CoreCompileInputs.cache
+D:\_git\VS\Css_Ctrl\Ctrl_Dll210127\obj\Debug\Ctrl_Dll.dll
+D:\_git\VS\Css_Ctrl\Ctrl_Dll210127\obj\Debug\Ctrl_Dll.pdb
+D:\_git\VS\Css_Ctrl\Ctrl_Dll210127\bin\Debug\Ctrl_Dll.dll
+D:\_git\VS\Css_Ctrl\Ctrl_Dll210127\bin\Debug\Ctrl_Dll.pdb
