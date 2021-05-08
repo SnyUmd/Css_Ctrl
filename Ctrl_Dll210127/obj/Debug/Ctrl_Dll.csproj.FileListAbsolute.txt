@@ -239,3 +239,4 @@ D:\_git\VS\Css_Ctrl\Ctrl_Dll210127\obj\Debug\Ctrl_Dll.dll
 D:\_git\VS\Css_Ctrl\Ctrl_Dll210127\obj\Debug\Ctrl_Dll.pdb
 D:\_git\VS\Css_Ctrl\Ctrl_Dll210127\bin\Debug\Ctrl_Dll.dll
 D:\_git\VS\Css_Ctrl\Ctrl_Dll210127\bin\Debug\Ctrl_Dll.pdb
+D:\_git\VS\Css_Ctrl\Ctrl_Dll210127\obj\Debug\Ctrl_Dll.csprojAssemblyReference.cache

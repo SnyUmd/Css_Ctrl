@@ -9,6 +9,8 @@ using System.IO;
 using System.Windows.Forms;
 using System.IO.Compression;
 
+using System.Diagnostics;//プロセススタートの為
+
 
 
 namespace Ctrl_Dll
@@ -68,7 +70,11 @@ namespace Ctrl_Dll
             mciSendString(cmd, null, 0, IntPtr.Zero);
         }
 
-
+        //***********************************************************************
+        public void FileExecution(string filePath)
+        {
+            using (Process.Start(filePath)) {}
+        }
 
         //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
         /// <summary>
@@ -817,8 +823,105 @@ namespace Ctrl_Dll
             return true;
         }
 
-//◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+
+        //**************************************************************************************
+        public string mHtmlFileSave(string strWrite, ref string strFolderPath, bool blUpdateFolder)
+        {
+            //bool blReturn = false;
+            string strFileName = "";
+
+            try
+            {
+                //SaveFileDialogクラスのインスタンスを作成
+                SaveFileDialog sfd = new SaveFileDialog();
+
+                //はじめのファイル名を指定する
+                //はじめに「ファイル名」で表示される文字列を指定する
+                sfd.FileName = "新しいファイル.html";
+                //はじめに表示されるフォルダを指定する
+                //sfd.InitialDirectory = Mydocument_Directory();
+                sfd.InitialDirectory = strFolderPath;
+                //[ファイルの種類]に表示される選択肢を指定する
+                //指定しない（空の文字列）の時は、現在のディレクトリが表示される
+                sfd.Filter = "テキストファイル(*.html)|*.html|すべてのファイル(*.*)|*.*";
+                //[ファイルの種類]ではじめに選択されるものを指定する
+                //1番目の「テキストファイル」が選択されているようにする
+                sfd.FilterIndex = 1;
+                //タイトルを設定する
+                sfd.Title = "保存先のファイルを選択してください";
+                //ダイアログボックスを閉じる前に現在のディレクトリを復元するようにする
+                sfd.RestoreDirectory = true;
+                //既に存在するファイル名を指定したとき警告する
+                //デフォルトでTrueなので指定する必要はない
+                sfd.OverwritePrompt = true;
+                //存在しないパスが指定されたとき警告を表示する
+                //デフォルトでTrueなので指定する必要はない
+                sfd.CheckPathExists = true;
+
+                //ダイアログを表示する
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    //OKボタンがクリックされたとき、選択されたファイル名を表示する
+                    //Console.WriteLine(sfd.FileName);
+                    strFileName = sfd.FileName;
+                    //次回開くフォルダが必要であればアップデート
+                    if (blUpdateFolder)
+                        strFolderPath = Get_Folder_Name(sfd.FileName);
+
+                    StreamWriter sw = new StreamWriter(sfd.FileName, false, Encoding.ASCII);
+                    sw.Write(strWrite);
+                    sw.Close();
+                }
+            }
+            catch
+            {
+                return "";
+            }
+
+            return strFileName;
+        }
+
+        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
         public string mFileCreation(string str_top_dir)
+        {
+            //SaveFileDialogクラスのインスタンスを作成
+            SaveFileDialog sfd = new SaveFileDialog();
+            //はじめに「ファイル名」で表示される文字列を指定する
+            sfd.FileName = "NewFile";
+            //はじめに表示されるフォルダを指定する
+            sfd.InitialDirectory = str_top_dir;
+
+
+            //[ファイルの種類]に表示される選択肢を指定する
+            //指定しない（空の文字列）の時は、現在のディレクトリが表示される
+            sfd.Filter = "テキストファイル・ログファイル(*.html)|*.html|すべてのファイル(*.*)|*.*";
+
+            //[ファイルの種類]ではじめに選択されるものを指定する
+            //2番目の「すべてのファイル」が選択されているようにする
+            sfd.FilterIndex = 2;
+
+
+            //タイトルを設定する
+            sfd.Title = "Please select a save destination file";
+            //ダイアログボックスを閉じる前に現在のディレクトリを復元するようにする
+            sfd.RestoreDirectory = true;
+            //既に存在するファイル名を指定したとき警告する
+            //デフォルトでTrueなので指定する必要はない
+            sfd.OverwritePrompt = true;
+            //存在しないパスが指定されたとき警告を表示する
+            //デフォルトでTrueなので指定する必要はない
+            sfd.CheckPathExists = true;
+
+            //ダイアログを表示する
+            if (sfd.ShowDialog() == DialogResult.OK)
+                //OKボタンがクリックされたとき、選択されたファイル名を表示する
+                return sfd.FileName + ".html";
+            else
+                return "";
+        }
+
+        //***************************************************************
+        public string mFileCreation_html(string str_top_dir)
         {
             //SaveFileDialogクラスのインスタンスを作成
             SaveFileDialog sfd = new SaveFileDialog();
@@ -851,11 +954,10 @@ namespace Ctrl_Dll
             //ダイアログを表示する
             if (sfd.ShowDialog() == DialogResult.OK)
                 //OKボタンがクリックされたとき、選択されたファイル名を表示する
-                return sfd.FileName + ".txt";
+                return sfd.FileName + ".html";
             else
                 return "";
         }
-
 
 
 
