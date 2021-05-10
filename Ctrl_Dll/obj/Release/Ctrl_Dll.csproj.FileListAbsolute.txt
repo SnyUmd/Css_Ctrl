@@ -30,3 +30,10 @@ C:\_strage\Box Sync\VS_Soft\Ctrl_Dll2\Ctrl_Dll200201\obj\Release\Ctrl_Dll.csproj
 C:\_strage\Box Sync\VS_Soft\Ctrl_Dll2\Ctrl_Dll200201\obj\Release\Ctrl_Dll.csproj.ResolveComReference.cache
 C:\_strage\Box Sync\VS_Soft\Ctrl_Dll2\Ctrl_Dll200201\obj\Release\Ctrl_Dll.dll
 C:\_strage\Box Sync\VS_Soft\Ctrl_Dll2\Ctrl_Dll200201\obj\Release\Ctrl_Dll.pdb
+D:\_git\VS\Css_Ctrl\Ctrl_Dll\bin\Release\Ctrl_Dll.dll
+D:\_git\VS\Css_Ctrl\Ctrl_Dll\bin\Release\Ctrl_Dll.pdb
+D:\_git\VS\Css_Ctrl\Ctrl_Dll\obj\Release\Ctrl_Dll.csprojAssemblyReference.cache
+D:\_git\VS\Css_Ctrl\Ctrl_Dll\obj\Release\Ctrl_Dll.csproj.ResolveComReference.cache
+D:\_git\VS\Css_Ctrl\Ctrl_Dll\obj\Release\Ctrl_Dll.csproj.CoreCompileInputs.cache
+D:\_git\VS\Css_Ctrl\Ctrl_Dll\obj\Release\Ctrl_Dll.dll
+D:\_git\VS\Css_Ctrl\Ctrl_Dll\obj\Release\Ctrl_Dll.pdb
