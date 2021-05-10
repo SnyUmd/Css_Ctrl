@@ -10,6 +10,8 @@ using System.Drawing; //参照の追加の事
 
 using System.Net; //IPアドレス取得の為に
 
+using System.Windows.Forms;
+
 namespace Ctrl_Dll
 {
     public class cls_Etc
@@ -343,6 +345,12 @@ namespace Ctrl_Dll
             {
                 return "err";
             }
+        }
+
+        public static void getScreenSize(ref int x, ref int y)
+        {
+            x = Screen.PrimaryScreen.Bounds.Width;
+            y = Screen.PrimaryScreen.Bounds.Height;
         }
     }
 }
