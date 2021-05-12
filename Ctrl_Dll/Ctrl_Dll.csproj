@@ -60,6 +60,7 @@
     <Compile Include="cls_Selial_Ctrl.cs" />
     <Compile Include="cls_TextCtrl.cs" />
     <Compile Include="cls_ToolCtrl.cs" />
+    <Compile Include="cls_WpfWindowCtrl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
