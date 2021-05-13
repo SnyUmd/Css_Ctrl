@@ -98,7 +98,7 @@ namespace Ctrl_Dll
             {
                 port.Open();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("ポートのオープンに失敗しました。" + stNewLine + 
                                 "ポート名を確認してください。<" + st_port_name + ">");
@@ -129,7 +129,7 @@ namespace Ctrl_Dll
             {
                 port.Write(stSend);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("送信に失敗しました。");
                 return false;
@@ -159,7 +159,7 @@ namespace Ctrl_Dll
             {
                 str_Return = port.ReadTo("\r");
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("受信に失敗しました");
                 return "err";

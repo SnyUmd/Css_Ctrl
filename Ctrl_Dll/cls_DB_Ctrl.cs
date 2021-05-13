@@ -153,7 +153,7 @@ namespace Ctrl_Dll
                     MessageBox.Show("実行完了");
                 }
             }
-            catch(Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("実行失敗");
                 return;

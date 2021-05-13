@@ -9,7 +9,7 @@ namespace Ctrl_Dll
 
     public class cls_M_D_umd
     {
-        string strNL = "\r\n";
+        //string strNL = "\r\n";
 
         public string strURL_Headder = @"https://www.4sync.com/web/directDownload/";
         public int[] ary_iENC = { 2, 0, 1, 7, 0, 9, 0, 2 };

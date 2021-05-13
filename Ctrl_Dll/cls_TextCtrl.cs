@@ -22,7 +22,7 @@ namespace Ctrl_Dll
 {
     public class cls_TextCtrl
     {
-        string New_Line = "\r\n";
+        //string New_Line = "\r\n";
 
 
         //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
@@ -756,7 +756,6 @@ namespace Ctrl_Dll
         //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
         public List<string> mReadLine_TextFile(string str_path)
         {
-            int num;
             string strBuf;
             List<string> lst_strReturn = new List<string>();
 

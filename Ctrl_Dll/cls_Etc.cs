@@ -10,14 +10,12 @@ using System.Drawing; //参照の追加の事
 
 using System.Net; //IPアドレス取得の為に
 
-using System.Windows.Forms;
-
 namespace Ctrl_Dll
 {
     public class cls_Etc
     {
-        string NewLine = "\r\n";
-        string Comma = ",";
+        //string NewLine = "\r\n";
+        //string Comma = ",";
 
         //★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
         //★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
