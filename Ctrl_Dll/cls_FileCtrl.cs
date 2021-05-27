@@ -15,7 +15,7 @@ using System.Diagnostics;//プロセススタートの為
 
 namespace Ctrl_Dll
 {
-    public class cls_FileCtrl
+    public class  cls_FileCtrl
     {
         //ファイルを開く際に使用するための宣言
         public System.Diagnostics.Process App = null;
@@ -98,6 +98,18 @@ namespace Ctrl_Dll
         {
             //string test = System.Environment.SpecialFolder.Personal.ToString();
             return System.Environment.GetFolderPath(Environment.SpecialFolder.Personal) + @"\";
+        }
+
+        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        /// <summary>
+        /// マイピクチャのディレクトリを取得
+        /// </summary>
+        /// <returns></returns>
+        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        public string MyPicture_Directory()
+        {
+            //string test = System.Environment.SpecialFolder.Personal.ToString();
+            return System.Environment.GetFolderPath(Environment.SpecialFolder.MyPictures) + @"\";
         }
 
 
@@ -227,17 +239,19 @@ namespace Ctrl_Dll
         //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
         public void Txt_File_Write(string File_Dir, string W_Str, bool Overwrite)
         {
-            System.IO.StreamWriter sw =
-                new System.IO.StreamWriter(File_Dir, false, System.Text.Encoding.GetEncoding("shift_jis"));
-            if (Overwrite)
+            using (System.IO.StreamWriter sw =
+                new System.IO.StreamWriter(File_Dir, false, System.Text.Encoding.GetEncoding("shift_jis")))
             {
+                if (Overwrite)
+                {
 
+                }
+                //テキストを内容を書き込む
+                sw.Write(W_Str);
+                //閉じる
+                sw.Close();
             }
-            //テキストを内容を書き込む
-            sw.Write(W_Str);
-            //閉じる
-            sw.Close();
-            sw.Dispose();
+            //sw.Dispose();
 
         }
 

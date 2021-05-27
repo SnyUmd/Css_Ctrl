@@ -843,6 +843,112 @@ namespace Ctrl_Dll
 
             return strRTN;
         }
+
+
+        //*****************************************************************************************
+        /// <summary>
+        /// 文字列を暗号化
+        /// </summary>
+        /// <param name="str">対象文字列</param>
+        /// <param name="ary_iKey">暗号化キー</param>
+        /// <returns></returns>
+        //*****************************************************************************************
+        public string mEnctyption(string str, int[] ary_iKey)
+        {
+            string strRTN = "";
+            string strTarget = str;
+            int iLoop;
+            //int iBackSlash_cnt = str.Length - str.Replace(@"/", "").Length;//"\"の出現回数を格納
+
+
+            //if (iBackSlash_cnt < 5)
+            //    return "err";//____________________________
+
+            iLoop = strTarget.Length;
+
+
+            int iENC_Num = 0;
+            int iBuf;
+            string strBuf;
+            char cBuf;
+            bool blAddition = true;
+            for (int i = 0; i < iLoop; i++)
+            {
+                if (iENC_Num == ary_iKey.Count())
+                {
+                    iENC_Num = 0;
+                    blAddition = !blAddition;
+                }
+
+                strBuf = strTarget.Substring(i, 1);
+                cBuf = Convert.ToChar(strBuf);
+
+                if (blAddition)
+                    //iBuf = int.Parse(strBuf) + ary_iENC[iENC_Num];
+                    iBuf = (int)cBuf + ary_iKey[iENC_Num];
+                else
+                    //iBuf = int.Parse(strBuf) - ary_iENC[iENC_Num];
+                    iBuf = (int)cBuf - ary_iKey[iENC_Num];
+
+                //strRTN = iBuf.ToString() + strRTN; 
+                strRTN = (char)iBuf + strRTN;
+
+                if (i < iLoop - 1)
+                {
+                    iENC_Num++;
+                    //strRTN = "," + strRTN;
+                }
+            }
+            return strRTN;
+        }
+
+        //*****************************************************************************************
+        /// <summary>
+        /// 文字列を複合化
+        /// </summary>
+        /// <param name="str">対象文字列</param>
+        /// <param name="ary_iKey">暗号化キー</param>
+        /// <returns></returns>
+        //*****************************************************************************************
+        public string mRestoration(string str, int[] ary_iKey)
+        {
+            string strRTN = "";
+            string strTarget = str;
+            int iLoop;
+
+            int iENC_Num = 0;
+            int iBuf;
+            string strBuf;
+            bool blAddition = false;
+            char cBuf;
+
+            strTarget = mHTML_SpecialCharacter_Change(strTarget);
+
+            iLoop = strTarget.Length;
+            for (int i = 0; i < iLoop; i++)
+            {
+                if (iENC_Num == ary_iKey.Count())
+                {
+                    iENC_Num = 0;
+                    blAddition = !blAddition;
+                }
+
+                strBuf = strTarget.Substring(strTarget.Length - 1 - i, 1);
+                cBuf = Convert.ToChar(strBuf);
+
+                if (blAddition)
+                    //iBuf = int.Parse(strBuf) + ary_iENC[iENC_Num];
+                    iBuf = (int)cBuf + ary_iKey[iENC_Num];
+                else
+                    iBuf = (int)cBuf - ary_iKey[iENC_Num];
+                strRTN += (char)iBuf;
+
+                if (i < iLoop - 1)
+                    iENC_Num++;
+            }
+
+            return strRTN;
+        }
     }
 
 }
