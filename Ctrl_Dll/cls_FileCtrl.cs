@@ -134,7 +134,7 @@ namespace Ctrl_Dll
         //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
         public string Get_Folder_Name(string F_D_N)
         {
-            return Path.GetDirectoryName(F_D_N);
+            return Path.GetDirectoryName(F_D_N) + @"\";
             /*
             int File_Len;
             int Extension_Point;
