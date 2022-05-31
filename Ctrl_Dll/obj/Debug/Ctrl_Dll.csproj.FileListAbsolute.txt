@@ -247,3 +247,4 @@ D:\_git\VS\Css_Ctrl\Ctrl_Dll\obj\Debug\Ctrl_Dll.csproj.CoreCompileInputs.cache
 D:\_git\VS\Css_Ctrl\Ctrl_Dll\obj\Debug\Ctrl_Dll.dll
 D:\_git\VS\Css_Ctrl\Ctrl_Dll\obj\Debug\Ctrl_Dll.pdb
 D:\_git\VS\Css_Ctrl\Ctrl_Dll\obj\Debug\Ctrl_Dll.csproj.CopyComplete
+D:\_git\VS\Css_Ctrl\Ctrl_Dll\obj\Debug\Ctrl_Dll.csproj.AssemblyReference.cache
