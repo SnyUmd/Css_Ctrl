@@ -41,6 +41,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Windows" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Windows.Forms.DataVisualization.Design" />
@@ -51,7 +52,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsDialogCtrl.cs" />
     <Compile Include="clsGdriveCtrl.cs" />
+    <Compile Include="clsSysCtrl.cs" />
     <Compile Include="cls_DB_Ctrl.cs" />
     <Compile Include="cls_Etc.cs" />
     <Compile Include="cls_Excel_Cont.cs" />

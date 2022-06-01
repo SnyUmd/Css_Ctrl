@@ -8,7 +8,7 @@ namespace Ctrl_Dll
 {
     public class clsTranslationCtrl
     {
-        public bool SetJAtoEN(string str_en, string source_language = "en", string target_language = "ja")
+        public bool SetTranslation(string str_en, string source_language = "en", string target_language = "ja")
         {
             try
             {
