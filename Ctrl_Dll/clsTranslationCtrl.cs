@@ -41,15 +41,17 @@ namespace Ctrl_Dll
 
         //***************************************************************************************************
         /// <summary>
-        /// 引数urlにアクセスした際に取得できるHTMLを返します。
+        /// 引数urlにアクセスした際に取得できるHTMLを返す
         /// </summary>
-        /// <param name="url">URL(アドレス)</param>
-        /// <returns>取得したHTML</returns>
+        /// <param name="str_target">翻訳目的文</param>
+        /// <param name="source_language">翻訳 言語</param>
+        /// <param name="target_language">元言語</param>
+        /// <returns></returns>
         //***************************************************************************************************
-        public string GetHtml(string str_en, string source_language = "en", string target_language = "ja")
+        public string GetHtml(string str_target, string source_language = "en", string target_language = "ja")
         {
             string url = "https://script.google.com/macros/s/AKfycbwZKnRrH2tF4o147NLkId4xilXCabm4lS5o-nbo8QvAW31jsHZ9/exec";
-            url += $"?text={str_en}";
+            url += $"?text={str_target}";
             url += $"&source={source_language}";
             url += $"&target={target_language}";
 

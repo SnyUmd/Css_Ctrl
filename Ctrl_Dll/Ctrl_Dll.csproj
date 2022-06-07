@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsBrowserCtrl.cs" />
     <Compile Include="clsDialogCtrl.cs" />
     <Compile Include="clsGdriveCtrl.cs" />
     <Compile Include="clsSysCtrl.cs" />

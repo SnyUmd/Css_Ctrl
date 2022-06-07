@@ -60,15 +60,14 @@ namespace Ctrl_Dll
             return Retrun_Str;
         }
 
-
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         /// <summary>
         /// 漢字を【カタカナ】【ひらがな】に変換する
         /// </summary>
         /// <param name="Target_Str">変換する文字列</param>
         /// <param name="Change_Type_Katakana1_Hirangana2">1：カタカナ / 2：ひらがな</param>
         /// <returns></returns>
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         public string Change_Kana(string Target_Str, int Change_Type_Katakana1_Hirangana2)
         {
             string Return_Kana_Str = "";
@@ -87,7 +86,7 @@ namespace Ctrl_Dll
         }
 
 
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         /// <summary>
         /// 文字列を指定した文字で包む
         /// </summary>
@@ -95,7 +94,7 @@ namespace Ctrl_Dll
         /// <param name="Start_Str">先頭に追加する文字</param>
         /// <param name="End_Str">末尾に追加する文字</param>
         /// <returns></returns>
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         public string Str_Wrap(string Str, string Start_Str, string End_Str)
         {
             string Return_Str = Str;
@@ -106,13 +105,13 @@ namespace Ctrl_Dll
             return Return_Str;
         }
 
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         /// <summary>
         /// 文字列の先頭と末尾を削除する。
         /// </summary>
         /// <param name="Str">対象文字列</param>
         /// <returns></returns>
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         public string Str_Wrap_Rome(string Str)
         {
             string Retunf_Str = Str;
@@ -123,7 +122,7 @@ namespace Ctrl_Dll
         }
 
 
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         /// <summary>
         /// 文字列の中の指定文字をすべて指定文字に変換
         /// </summary>
@@ -131,7 +130,7 @@ namespace Ctrl_Dll
         /// <param name="Target_Word"></param>
         /// <param name="Change_Word"></param>
         /// <returns></returns>
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         public string StrA_Change_Str_B(string Target_Str, string Target_Word, string Change_Word)
         {
             int num = Character_Figure(Target_Str, Target_Word);
@@ -142,7 +141,7 @@ namespace Ctrl_Dll
             return Return_Str;
         }
 
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         /// <summary>
         /// 文字列を指定文字から指定文字までで区切り、リスト化(Include:含める)
         /// </summary>
@@ -152,7 +151,7 @@ namespace Ctrl_Dll
         /// <param name="Delimit_Wards_Start_Include">true:スタート目印文字を含めて返す</param>
         /// <param name="Delimit_Wards_End_Include">true:エンド目印文字を含めて返す</param>
         /// <returns></returns>
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         public List<string> Str_Delimit_Set_List
             (string Target_Str, string Delimit_Wards_Start, string Delimit_Wards_End, bool Delimit_Wards_Start_Include, bool Delimit_Wards_End_Include)
         {
@@ -203,14 +202,14 @@ namespace Ctrl_Dll
             return Return_List;
         }
 
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         /// <summary>
         /// 文字列中に指定文字がいくつあるかを取得
         /// </summary>
         /// <param name="STR"></param>
         /// <param name="Serch"></param>
         /// <returns></returns>
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         public int Character_Figure(string STR, string Serch)
         {
 
@@ -226,7 +225,7 @@ namespace Ctrl_Dll
         }
 
 
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         /// <summary>
         /// 指定文字の後に指定文字を加える
         /// </summary>
@@ -235,7 +234,7 @@ namespace Ctrl_Dll
         /// <param name="Add_Char"></param>
         /// <param name="All_Char"></param>
         /// <returns></returns>
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         public string Character_Add_Back
             (string str, string Serch_Char, string Add_Char, bool All_Char)
         {
@@ -266,7 +265,7 @@ namespace Ctrl_Dll
         }
 
 
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         /// <summary>
         /// 指定文字の前に指定文字を加える
         /// </summary>
@@ -275,7 +274,7 @@ namespace Ctrl_Dll
         /// <param name="Add_Char"></param>
         /// <param name="All_Char"></param>
         /// <returns></returns>
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         public string Character_Add_Front
             (string str, string Serch_Char, string Add_Char, bool All_Char)
         {
@@ -305,7 +304,7 @@ namespace Ctrl_Dll
             return Return_str;
         }
 
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         /// <summary>
         /// 指定文字から指定文字までにある文字列を取得
         /// </summary>
@@ -315,7 +314,7 @@ namespace Ctrl_Dll
         /// <param name="Start_Str_Include">true:スタート検索文字を含む</param>
         /// <param name="End_Str_Include">true:エンド検索文字を含む</param>
         /// <returns></returns>
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         public string Str_Extraction
             (string STR, string Start_Str, string End_Str, bool Start_Str_Include, bool End_Str_Include)
         {
@@ -341,7 +340,7 @@ namespace Ctrl_Dll
                 return STR.Substring(Start_Point, End_Point - Start_Point);
         }
 
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         /// <summary>
         /// 指定位置からn回目に出てくる指定文字の位置を検索
         /// </summary>
@@ -351,7 +350,7 @@ namespace Ctrl_Dll
         /// <param name="Num"></param>
         /// <param name="Rear_Point"></param>
         /// <returns></returns>
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         public int Str_Serch_Number_Of_Times
             (string Str, string Serch_Str, int Serch_Start_Point, int Num, bool Rear_Point)
         {
@@ -379,7 +378,7 @@ namespace Ctrl_Dll
         }
 
 
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         /// <summary>
         /// 指定位置から見て、初めの指定文字から指定文字までにある文字列を取得
         /// </summary>
@@ -388,7 +387,7 @@ namespace Ctrl_Dll
         /// <param name="Start_Str"></param>
         /// <param name="End_Str"></param>
         /// <returns></returns>
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         public string Str_Extraction_Specified_Positiont
             (int Position, string STR, string Start_Str, string End_Str)
         {
@@ -412,7 +411,7 @@ namespace Ctrl_Dll
         }
 
 
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         /// <summary>
         /// 指定位置から指定文字手前までの文字列を取得
         /// </summary>
@@ -420,7 +419,7 @@ namespace Ctrl_Dll
         /// <param name="Secified_Char"></param>
         /// <param name="Start_Point"></param>
         /// <returns></returns>
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         public string Secified_Char_Read(string STR, string Secified_Char, int Start_Point)
         {
             int Secified_Char_Point;
@@ -443,7 +442,7 @@ namespace Ctrl_Dll
             return Return_STR;
         }
 
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         /// <summary>
         /// 指定文字から指定文字までにある文字列を削除
         /// </summary>
@@ -451,7 +450,7 @@ namespace Ctrl_Dll
         /// <param name="Start_Str"></param>
         /// <param name="End_Str"></param>
         /// <returns></returns>
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         public string Str_Remove_Range(string STR, string Start_Str, string End_Str)
         {
             int Start_Point;
@@ -470,14 +469,14 @@ namespace Ctrl_Dll
         }
 
 
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         /// <summary>
         /// 指定した文字列を削除
         /// </summary>
         /// <param name="STR"></param>
         /// <param name="Del_Char"></param>
         /// <returns></returns>
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         public string Specified_Character_Delete(string STR, string Del_Char)
         {
             int Del_Point;
@@ -502,92 +501,91 @@ namespace Ctrl_Dll
             return strSet;
         }
 
-        //文字列の種類判定**********************************************************************************
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //文字列の種類判定***************************************************************
         /// <summary>
         /// 指定した文字が、全角又は半角数字かを判定
         /// </summary>
         /// <param name="c"></param>
         /// <returns></returns>
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         public bool Number_Judge(char c)
         {
             return '0' <= c && c <= '9' || '０' <= c && c <= '９';
         }
 
 
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         /// <summary>
         /// 指定した文字が、半角数字かを判定
         /// </summary>
         /// <param name="c"></param>
         /// <returns></returns>
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         public bool Half_Size_Number_Judge(char c)
         {
             return '0' <= c && c <= '9';
         }
 
 
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         /// <summary>
         /// 指定した文字が、全角数字かを判定
         /// </summary>
         /// <param name="c"></param>
         /// <returns></returns>
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         public bool Full_Size_Number_Judge(char c)
         {
             return '０' <= c && c <= '９';
         }
 
 
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         /// <summary>
         /// 指定した文字が、全角又は半角英字かを判定
         /// </summary>
         /// <param name="c"></param>
         /// <returns></returns>
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         public bool Alphabet_Judge(char c)
         {
             return 'A' <= c && c <= 'Z' || 'Ａ' <= c && c <= 'Ｚ';
         }
 
 
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         /// <summary>
         /// 指定した文字が、半角英字かを判定
         /// </summary>
         /// <param name="c"></param>
         /// <returns></returns>
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         public bool Half_Size_Alphabet_Judge(char c)
         {
             return 'A' <= c && c <= 'Z';
         }
 
 
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         /// <summary>
         /// 指定した文字が、全角英字かを判定
         /// </summary>
         /// <param name="c"></param>
         /// <returns></returns>
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         public bool Full_Size_Alphabet_Judge(char c)
         {
             return 'Ａ' <= c && c <= 'Ｚ';
         }
 
 
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         /// <summary>
         /// 指定した文字が、英数字かを判定
         /// </summary>
         /// <param name="c"></param>
         /// <returns></returns>
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         public bool Number_Or_Alphabet_Judge(char c)
         {
             return
@@ -596,14 +594,14 @@ namespace Ctrl_Dll
         }
 
 
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         /// <summary>
         /// 指定した文字列に指定文字があるかを判定
         /// </summary>
         /// <param name="STR"></param>
         /// <param name="Judge_STR"></param>
         /// <returns></returns>
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         public bool String_Judge(string STR, string Judge_STR)
         {
             if (STR.IndexOf(Judge_STR) > -1) return true;
@@ -612,7 +610,7 @@ namespace Ctrl_Dll
         //文字列の種類判定**********************************************************************************
 
 
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         /// <summary>
         /// データ文字列を(多次元)配列化
         /// </summary>
@@ -620,7 +618,7 @@ namespace Ctrl_Dll
         /// <param name="s_group_word"></param>
         /// <param name="s_separate_word"></param>
         /// <returns></returns>
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         public string[,] m_ArrayMake(string data_text, string s_group_word, string s_separate_word)
         {
             int x, y;
@@ -700,14 +698,14 @@ namespace Ctrl_Dll
             return s_return;
         }
 
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         /// <summary>
         /// 
         /// </summary>
         /// <param name="lst_s_data"></param>
         /// <param name="s_separate_word"></param>
         /// <returns></returns>
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         public string[,] m_ListToAry_Data(List<string> lst_s_data, string s_separate_word)
         {
             int x, y;
@@ -740,20 +738,20 @@ namespace Ctrl_Dll
 
 
 
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         /// <summary>
         /// 文字列が数値であるか判定
         /// </summary>
         /// <param name="str"></param>
         /// <returns></returns>
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         public bool mStrIsNum_Judge(string str)
         {
             int i = 0;
             return int.TryParse(str, out i);
         }
 
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         public List<string> mReadLine_TextFile(string str_path)
         {
             string strBuf;
@@ -777,7 +775,7 @@ namespace Ctrl_Dll
             return lst_strReturn;
         }
 
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         /// <summary>
         /// テキストを１行区切でリスト化
         /// </summary>
@@ -785,6 +783,7 @@ namespace Ctrl_Dll
         /// <param name="str_separator">センサ区切り文字</param>
         /// <param name="i_data_num">１行内のセンサ数</param>
         /// <returns></returns>
+        /// //*******************************************************************************
         public List<string> mReadLine_String(string str_data, string str_separator, int i_data_num)
         {
             string strBuf;
@@ -814,7 +813,7 @@ namespace Ctrl_Dll
         }
 
 
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         /// <summary>
         /// 文字の出現回数をカウント
         /// </summary>
@@ -827,7 +826,7 @@ namespace Ctrl_Dll
         }
 
 
-        //◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+        //*******************************************************************************
         public string mHTML_SpecialCharacter_Change(string str)
         {
             string strRTN = str;

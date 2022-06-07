@@ -42,7 +42,8 @@ namespace Ctrl_Dll
             return lst_str_Return;
         }
 
-        //配列数取得方法」
+        //*******************************************************************************
+        //配列数取得方法
         public void list_count()
         {
             int[] array1 = { 1, 2, 3 };
