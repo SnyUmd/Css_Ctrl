@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using System.Windows.Media.Imaging;
+/*using System.Windows.Media.Imaging;
 using Windows.Graphics.Imaging;
 using Windows.Media.Ocr;
 
@@ -48,4 +48,4 @@ namespace Ctrl_Dll
             txtResult.Text = result.Text;
         }
     }
-}
+}*/

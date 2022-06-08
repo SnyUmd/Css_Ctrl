@@ -30,6 +30,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
@@ -52,6 +55,7 @@
     <Compile Include="clsDialogCtrl.cs" />
     <Compile Include="clsGdriveCtrl.cs" />
     <Compile Include="clsSysCtrl.cs" />
+    <Compile Include="cls_ClipBoardCtrl.cs" />
     <Compile Include="cls_DB_Ctrl.cs" />
     <Compile Include="cls_Etc.cs" />
     <Compile Include="cls_Excel_Cont.cs" />

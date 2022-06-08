@@ -345,6 +345,7 @@ namespace Ctrl_Dll
             }
         }
 
+        //*********************************************************************************
         public static void getScreenSize(ref int x, ref int y)
         {
             x = Screen.PrimaryScreen.Bounds.Width;
