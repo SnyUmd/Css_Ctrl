@@ -25,7 +25,8 @@ namespace Ctrl_Dll
             //phthonプロセスをセット
             Process PythonProcess = new Process
             {
-                StartInfo = new ProcessStartInfo("python.exe")
+                StartInfo = new ProcessStartInfo("pythonw.exe")//コンソールを表示せずに実行　※pythonスクリプトファイルの拡張子をpywにする必要あり。
+                //StartInfo = new ProcessStartInfo("python.exe")
                 {
                     UseShellExecute = false,
                     RedirectStandardOutput = true,
