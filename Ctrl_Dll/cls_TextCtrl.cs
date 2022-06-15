@@ -948,6 +948,27 @@ namespace Ctrl_Dll
 
             return strRTN;
         }
+
+        //*****************************************************************************************
+        /// <summary>
+        /// 特定の文字を全て削除
+        /// </summary>
+        /// <param name="str_target"></param>
+        /// <param name="str_del"></param>
+        /// <returns></returns>
+        //*****************************************************************************************
+        public string mDelChar(string str_target, string str_del)
+        {
+            string result_ = str_target.Replace(str_del, "");
+            return result_;
+        }
+
+        //*****************************************************************************************
+        public string mChangeChar(string str_target, string char_current, string char_change)
+        {
+            string result_ = str_target.Replace(char_current, char_change);
+            return result_;
+        }
     }
 
 }
